@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Smart Study Buddy</title>
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/animations.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html">SmartStudy</a></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+    </header>
+
+    <div class="login-container">
+        <div class="login-card">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="flip-card-content">
+                            <h2 class="fade-in">Login</h2>
+                            <input type="email" placeholder="Email" class="slide-up">
+                            <input type="password" placeholder="Password" class="slide-up">
+                            <button class="glow">Login</button>
+                            <p>Don't have an account? <span class="flip-btn">Register</span></p>
+                        </div>
+                    </div>
+                    <div class="flip-card-back">
+                        <div class="flip-card-content">
+                            <h2 class="fade-in">Register</h2>
+                            <input type="text" placeholder="Full Name" class="slide-up">
+                            <input type="email" placeholder="Email" class="slide-up">
+                            <input type="password" placeholder="Password" class="slide-up">
+                            <button class="glow">Register</button>
+                            <p>Already have an account? <span class="flip-btn">Login</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add JavaScript for the flip card functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const flipBtns = document.querySelectorAll('.flip-btn');
+            const flipCard = document.querySelector('.flip-card');
+            
+            flipBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    flipCard.classList.toggle('flipped');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

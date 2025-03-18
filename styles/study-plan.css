@@ -1,0 +1,38 @@
+/* Study Plan Page Styles */
+.study-plan {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #1c1c1c, #0a0a0a);
+    color: #e0e0e0;
+    text-align: center;
+}
+
+.study-plan h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #00ffc8;
+}
+
+.study-plan p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+#timer {
+    font-size: 3rem;
+    margin: 20px 0;
+    color: #00ffc8;
+}
+
+#start-timer {
+    padding: 12px 24px;
+    background: #00ffc8;
+    color: #121212;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#start-timer:hover {
+    background: #00c7a1;
+}

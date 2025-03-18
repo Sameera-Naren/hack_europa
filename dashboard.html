@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Smart Study Buddy</title>
+    <link rel="stylesheet" href="styles/discord-dashboard.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Servers sidebar (Left) -->
+        <div class="servers-sidebar">
+            <div class="server-icon home-icon">
+                <a href="index.html" title="Home"><i class="fas fa-graduation-cap"></i></a>
+            </div>
+            <div class="server-separator"></div>
+            
+            <div class="server-icon active" title="Computer Science">
+                <span>CS</span>
+            </div>
+            <div class="server-icon" title="Mathematics">
+                <span>MA</span>
+            </div>
+            <div class="server-icon" title="Physics">
+                <span>PH</span>
+            </div>
+            <div class="server-icon add-server" title="Join New Study Group">
+                <i class="fas fa-plus"></i>
+            </div>
+            
+            <div class="server-separator"></div>
+            <div class="server-icon settings-icon" title="Settings">
+                <i class="fas fa-cog"></i>
+            </div>
+            <div class="server-icon user-profile" title="Profile">
+                <i class="fas fa-user"></i>
+            </div>
+        </div>
+
+        <!-- Channels sidebar (Middle-left) -->
+        <div class="channels-sidebar">
+            <div class="server-header">
+                <h3>Computer Science</h3>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            
+            <div class="channels-container">
+                <div class="channel-category">
+                    <div class="category-header">
+                        <i class="fas fa-chevron-down"></i>
+                        <span>STUDY RESOURCES</span>
+                    </div>
+                    <div class="channel active">
+                        <i class="fas fa-book"></i>
+                        <span>course-materials</span>
+                    </div>
+                    <div class="channel">
+                        <i class="fas fa-sticky-note"></i>
+                        <span>shared-notes</span>
+                    </div>
+                    <div class="channel">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>exam-schedules</span>
+                    </div>
+                </div>
+                
+                <div class="channel-category">
+                    <div class="category-header">
+                        <i class="fas fa-chevron-down"></i>
+                        <span>DISCUSSION</span>
+                    </div>
+                    <div class="channel">
+                        <i class="fas fa-comment"></i>
+                        <span>general</span>
+                    </div>
+                    <div class="channel">
+                        <i class="fas fa-question-circle"></i>
+                        <span>homework-help</span>
+                    </div>
+                    <div class="channel">
+                        <i class="fas fa-code"></i>
+                        <span>programming</span>
+                    </div>
+                </div>
+                
+                <div class="channel-category">
+                    <div class="category-header">
+                        <i class="fas fa-chevron-down"></i>
+                        <span>CONFERENCE</span>
+                    </div>
+                    <div class="channel">
+                        <i class="fas fa-video"></i>
+                        <span>study-sessions</span>
+                        <div class="online-indicator">5</div>
+                    </div>
+                    <div class="channel">
+                        <i class="fas fa-headset"></i>
+                        <span>lab-discussion</span>
+                        <div class="online-indicator">3</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="user-controls">
+                <div class="user-info">
+                    <div class="avatar">
+                        <img src="/api/placeholder/32/32" alt="User avatar">
+                        <div class="status-indicator online"></div>
+                    </div>
+                    <div class="user-details">
+                        <span class="username">StudyMaster</span>
+                        <span class="status">Online</span>
+                    </div>
+                </div>
+                <div class="user-actions">
+                    <i class="fas fa-microphone"></i>
+                    <i class="fas fa-headphones"></i>
+                    <i class="fas fa-cog"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main content area (Right) -->
+        <div class="content-area">
+            <div class="content-header">
+                <div class="channel-info">
+                    <i class="fas fa-book"></i>
+                    <span>course-materials</span>
+                </div>
+                <div class="header-actions">
+                    <i class="fas fa-bell"></i>
+                    <i class="fas fa-thumbtack"></i>
+                    <i class="fas fa-users"></i>
+                    <div class="search-box">
+                        <input type="text" placeholder="Search">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-messages">
+                <div class="welcome-banner fade-in">
+                    <div class="welcome-icon">📚</div>
+                    <h2>Welcome to Course Materials</h2>
+                    <p>Share lecture notes, textbooks, and study resources with your classmates.</p>
+                </div>
+                
+                <div class="resource-grid slide-up">
+                    <div class="resource-card">
+                        <div class="resource-icon"><i class="fas fa-file-pdf"></i></div>
+                        <div class="resource-details">
+                            <h3>Data Structures Lecture Notes</h3>
+                            <p>Updated yesterday by Prof. Johnson</p>
+                            <div class="resource-stats">
+                                <span><i class="fas fa-download"></i> 42</span>
+                                <span><i class="fas fa-comment"></i> 5</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon"><i class="fas fa-file-powerpoint"></i></div>
+                        <div class="resource-details">
+                            <h3>Algorithms Presentation Slides</h3>
+                            <p>Shared by Alex Chen</p>
+                            <div class="resource-stats">
+                                <span><i class="fas fa-download"></i> 28</span>
+                                <span><i class="fas fa-comment"></i> 3</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon"><i class="fas fa-file-code"></i></div>
+                        <div class="resource-details">
+                            <h3>Python Code Examples</h3>
+                            <p>Created by Study Group #3</p>
+                            <div class="resource-stats">
+                                <span><i class="fas fa-download"></i> 37</span>
+                                <span><i class="fas fa-comment"></i> 12</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card add-resource">
+                        <div class="add-icon">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <p>Upload New Resource</p>
+                    </div>
+                </div>
+                
+                <div class="upcoming-sessions slide-up">
+                    <h3><i class="fas fa-calendar-alt"></i> Upcoming Study Sessions</h3>
+                    <div class="session-list">
+                        <div class="session-item">
+                            <div class="session-time">
+                                <span class="day">MON</span>
+                                <span class="time">3:00 PM</span>
+                            </div>
+                            <div class="session-info">
+                                <h4>Final Exam Prep: Databases</h4>
+                                <p>Host: Maria Williams · 8 participants</p>
+                            </div>
+                            <button class="join-btn glow">Join</button>
+                        </div>
+                        
+                        <div class="session-item">
+                            <div class="session-time">
+                                <span class="day">WED</span>
+                                <span class="time">5:30 PM</span>
+                            </div>
+                            <div class="session-info">
+                                <h4>Web Development Project Meeting</h4>
+                                <p>Host: Jason Lee · 4 participants</p>
+                            </div>
+                            <button class="join-btn glow">Join</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="message-input">
+                <div class="input-container">
+                    <i class="fas fa-plus-circle"></i>
+                    <input type="text" placeholder="Share a resource or message...">
+                    <i class="fas fa-paper-plane"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
